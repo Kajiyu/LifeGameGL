@@ -12,7 +12,7 @@ varying vec2 vTexCoord;
 const float pi = 3.145;
 
 bool isActive(vec4 color){
-    if(length(color.rgb) < 0.5){
+    if(length(color.g) > 0.8){
         return true;
     } else {
         return false;
@@ -55,9 +55,9 @@ vec4 lifegame(sampler2DRect tex) {
     }
     
     if(mystate){
-        return vec4(0.0,0.0,0.0,1.0);
+        return vec4(0.0,1.0,0.0,1.0);
     } else {
-        return vec4(1.0,1.0,1.0,1.0);
+        return vec4(0.0,0.0,0.0,1.0);
     }
 }
 

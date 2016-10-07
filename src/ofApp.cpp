@@ -3,6 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofBackground(0);
+    ofSetFrameRate(100);
     isFirst = false;
     image.load("tex2.png");
     shader.load("lifegame");
@@ -29,6 +30,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    ofSetWindowTitle(ofToString(ofGetFrameRate()));
     swap(currenttexture, beforetexture);
     currenttexture->begin();
     shader.begin();
